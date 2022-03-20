@@ -107,7 +107,6 @@ class ReactPageBuilderPlugin {
                                 ReactDOMServer.renderToStaticMarkup(
                                     page.component({ manifest, version })
                                 );
-                            console.log(htmlString);
                             return writeFile(
                                 path.resolve(__dirname, `../dist/${page.name}.html`),
                                 beautify(htmlString, { format: 'html' })
