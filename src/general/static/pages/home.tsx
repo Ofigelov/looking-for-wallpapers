@@ -11,7 +11,11 @@ export const HomePage = ({ manifest, svgFiles, version }: IHomePage): JSX.Elemen
             svgFiles={svgFiles}
             version={version}
         >
-            <h1>hello worldddd</h1>
+            <main className="main">
+                <section className="section">
+                    <div className="container" data-dc-kona-grid />
+                </section>
+            </main>
         </DefaultLayout>
     );
 };

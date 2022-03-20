@@ -6,6 +6,8 @@ import 'general/js/what-input';
 
 /* components */
 import 'components/lazysizes';
+import 'components/kona-image';
+import 'components/kona-grid';
 
 /* require svg */
 // @ts-ignore

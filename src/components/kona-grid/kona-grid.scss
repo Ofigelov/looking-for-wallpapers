@@ -1,0 +1,12 @@
+.kona-grid {
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, 150px);
+    display: grid;
+    justify-content: space-between;
+    list-style: none;
+
+    &__item {
+        display: block;
+        list-style: none;
+    }
+}

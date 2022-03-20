@@ -17,7 +17,8 @@
         "lint:fix": "eslint . --fix",
         "stylelint": "stylelint **/*.scss",
         "stylelint:fix": "stylelint **/*.scss --fix",
-        "init": "husky install && husky add .husky/pre-commit \"npx lint-staged\""
+        "init": "husky install && husky add .husky/pre-commit \"npx lint-staged\"",
+        "proxy": "lcp --proxyUrl https://konachan.net/post.json --proxyPartial posts"
     },
     "lint-staged": {
         "**/*.{css,scss}": [
