@@ -18,18 +18,15 @@ module.exports = (isModern, isDev, isWatch = false) => ({
     devtool: 'source-map',
     entry,
     output: {
-        path:  path.resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, '../dist'),
         publicPath: '/dist/',
         filename: '[name].js',
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
-        modules: [
-            'node_modules',
-            path.resolve(__dirname, '../src'),
-        ],
+        modules: ['node_modules', path.resolve(__dirname, '../src')],
         alias: {
-            'style-settings': path.resolve(__dirname, './src/general/scss/settings/index.scss'),
+            'style-settings': path.resolve(__dirname, '../src/general/scss/settings/index.scss'),
         },
     },
     module: {
