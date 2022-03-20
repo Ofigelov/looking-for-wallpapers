@@ -1,0 +1,20 @@
+{
+    "name": "LookingForWallpapers",
+    "short_name": "LFWP",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "/dist/favicons/32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/dist/favicons/80.png",
+            "sizes": "80x80",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#0066FF",
+    "background_color": "#191919",
+    "display": "standalone"
+}

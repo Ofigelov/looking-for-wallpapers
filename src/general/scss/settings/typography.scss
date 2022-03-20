@@ -1,0 +1,16 @@
+/*
+    put mixins which have consistant styles for all designs
+
+    examples:
+
+    @mixin title() {
+        @include f-stag(700);
+
+        font-size: 40px;
+        line-height: 1;
+
+        @include tablet {
+            font-size: 64px;
+        }
+    }
+ */

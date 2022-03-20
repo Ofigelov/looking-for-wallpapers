@@ -1,0 +1,53 @@
+.responsive-media {
+    & > img,
+    & > video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.of-cover {
+    display: block;
+    object-fit: cover;
+}
+
+.of-contain {
+    display: block;
+    object-fit: contain;
+}
+
+.op-top {
+    object-position: 50% 0;
+}
+
+.op-bottom {
+    object-position: 50% 100%;
+}
+
+.op-left {
+    object-position: 0 50%;
+}
+
+.op-right {
+    object-position: 100% 50%;
+}
+
+.op-top-left {
+    object-position: 0 0;
+}
+
+.op-top-right {
+    object-position: 100% 0;
+}
+
+.op-bottom-left {
+    object-position: 0 100%;
+}
+
+.op-bottom-right {
+    object-position: 100% 100%;
+}

@@ -1,0 +1,11 @@
+/* global styles for SVG */
+
+.icon {
+    // prevent extra space below icon
+    vertical-align: top;
+    fill: currentColor;
+
+    path {
+        fill: inherit;
+    }
+}

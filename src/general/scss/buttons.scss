@@ -1,0 +1,12 @@
+.btn-primary {
+    @include reset-button;
+
+    padding: 5px 10px;
+    border: 2px solid $color-pinky;
+    color: $color-white;
+    transition: border-color 0.3s linear;
+
+    @include hover-focus {
+        border-color: lighten($color-pinky, 10);
+    }
+}

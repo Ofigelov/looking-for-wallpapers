@@ -1,0 +1,91 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    overflow-x: hidden;
+    font-size: 100%;
+
+    &.is-blocked {
+        overflow: hidden;
+    }
+
+    &.is-blocked-touch {
+        position: fixed;
+        overflow-y: scroll;
+        width: 100%;
+        height: auto;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: $ff-roboto;
+    font-weight: $fw-regular;
+    -webkit-font-smoothing: antialiased;
+}
+
+figure {
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+}
+
+.components {
+    $this: &;
+
+    &__item {
+        #{$this} > & ~ & {
+            margin-top: $default-mobile-vertical-gap-between-components;
+
+            @include tablet {
+                margin-top: col(1);
+            }
+
+            &:last-child {
+                margin-bottom: $default-mobile-vertical-gap-between-components;
+
+                @include tablet {
+                    margin-bottom: col(1);
+                }
+
+                .components & {
+                    margin-bottom: 0;
+                }
+            }
+
+            &--big:last-child,
+            &--half-big:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        #{$this} > &--anchor + &,
+        #{$this} > &--half-big + &--big,
+        #{$this} > &--big + &--big {
+            margin-top: 0;
+        }
+    }
+}
+
+.hidden-content {
+    display: none;
+}
+
+[data-whatintent='touch'] *:focus {
+    outline: none;
+}

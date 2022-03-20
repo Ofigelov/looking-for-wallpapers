@@ -1,0 +1,13 @@
+/* general styles */
+import 'general/scss/index.scss';
+
+/* plugins */
+import 'general/js/what-input';
+
+/* components */
+import 'components/lazysizes';
+
+/* require svg */
+// @ts-ignore
+const files = require.context('general/svg', true, /^\.\/.*\.svg/);
+files.keys().forEach(files);

@@ -1,0 +1,10 @@
+$primary-ff: Roboto;
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 600;
+$fw-bold: 700;
+
+$fallback-font: -apple-system, blinkmacsystemfont, segoe ui, helvetica, arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$ff-roboto: $primary-ff, $fallback-font;

@@ -1,0 +1,112 @@
+/*
+    if you need some specific media query
+    create it in your styles and use these variables
+
+    if you have an only specific breakpoint
+    do not add it here
+
+    Custom media query usage:
+
+    @media (--desktop) {
+        padding-right: 0;
+    }
+
+ */
+
+$breakpoints: (
+    'mobile-tiny': 400px,
+    'mobile-small': 480px,
+    'mobile-wide': 640px,
+    'tablet': 768px,
+    'desktop': 1024px,
+    'desktop-medium': 1365px,
+    'wide': 1920px,
+);
+
+@each $size, $value in $breakpoints {
+    @custom-media --#{$size} (width >= #{$value});
+}
+
+@custom-media --mobile-tiny-only (width < #{map-get($breakpoints, mobile-tiny)});
+@custom-media --mobile-small-only (width < #{map-get($breakpoints, mobile-small)});
+@custom-media --mobile-small (width >= #{map-get($breakpoints, mobile-small)});
+@custom-media --only-mobile (width < #{map-get($breakpoints, tablet)});
+@custom-media --mobile-wide (width >= #{map-get($breakpoints, mobile-wide)});
+@custom-media --only-tablet (width >= #{map-get($breakpoints, tablet)}) and (width < #{map-get($breakpoints, desktop)});
+@custom-media --until-desktop (width < #{map-get($breakpoints, desktop)});
+@custom-media --only-desktop (width >= #{map-get($breakpoints, desktop)}) and (width < #{map-get($breakpoints, wide)});
+@custom-media --desktop-medium (width >= #{map-get($breakpoints, desktop-medium)});
+@custom-media --desktop-wide (width >= #{map-get($breakpoints, wide)});
+@custom-media --until-desktop (width < #{map-get($breakpoints, desktop)});
+
+@mixin mobile-tiny-only {
+    @media (--mobile-tiny-only) {
+        @content;
+    }
+}
+
+@mixin mobile-small-only {
+    @media (--mobile-small-only) {
+        @content;
+    }
+}
+
+@mixin mobile-small {
+    @media (--mobile-small) {
+        @content;
+    }
+}
+
+@mixin mobile-only {
+    @media (--only-mobile) {
+        @content;
+    }
+}
+
+@mixin mobile-wide {
+    @media (--mobile-wide) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (--tablet) {
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media (--only-tablet) {
+        @content;
+    }
+}
+
+@mixin until-desktop {
+    @media (--until-desktop) {
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media (--only-desktop) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (--desktop) {
+        @content;
+    }
+}
+
+@mixin desktop-medium {
+    @media (--desktop-medium) {
+        @content;
+    }
+}
+
+@mixin desktop-wide {
+    @media (--desktop-wide) {
+        @content;
+    }
+}

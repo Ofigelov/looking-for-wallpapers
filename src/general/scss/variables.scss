@@ -1,0 +1,30 @@
+body {
+    --grid-columns: 4;
+    --container-gap: 30px;
+    --container-width: 100vw;
+    --offset: 10px;
+    --scrollbar: 0px; // stylelint-disable-line length-zero-no-unit
+    --viewport-height: 100vh;
+
+    @include mobile-tiny-only {
+        --page-header-logo-size: 70px;
+    }
+
+    @include tablet {
+        --grid-columns: 8;
+        --ofset: 13px;
+        --media-height: 350px;
+    }
+
+    @include desktop {
+        --container-width: calc(100vw - var(--scrollbar));
+        --grid-columns: 12;
+        --offset: 16px;
+        --container-gap: 0;
+        --page-header-logo-size: #{col(1)};
+    }
+
+    @include desktop-wide {
+        --container-width: 1920px;
+    }
+}

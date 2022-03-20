@@ -1,0 +1,29 @@
+/* prettier-ignore */
+//$fonts: (
+//    ('name': $primary-ff,  'style': normal, 'weight': $fw-bold, 'file': 'suisseintl-bold'),
+//    ('name': $primary-ff,  'style': normal, 'weight': $fw-medium, 'file': 'suisseintl-medium'),
+//    ('name': $primary-ff,  'style': normal, 'weight': $fw-regular, 'file': 'suisseintl-regular'),
+//    ('name': $primary-ff,  'style': normal, 'weight': $fw-light, 'file': 'suisseintl-light'),
+//    ('name': $secondary-ff,  'style': normal, 'weight': $fw-bold, 'file': 'TiemposHeadline-Bold'),
+//    ('name': $secondary-ff,  'style': normal, 'weight': $fw-regular, 'file': 'TiemposHeadline-Regular'),
+//    ('name': $secondary-ff,  'style': italic, 'weight': $fw-regular, 'file': 'TiemposHeadline-RegularItalic'),
+//    ('name': $secondary-ff,  'style': italic, 'weight': $fw-light, 'file': 'TiemposHeadline-LightItalic'),
+//);
+//
+//@each $font in $fonts {
+//    @font-face {
+//        font-family: map-get($font, 'name');
+//        font-display: swap;
+//        font-style: map-get($font, 'style');
+//        font-weight: map-get($font, 'weight');
+//        src: url('../fonts/#{map-get($font, 'file')}.woff2') format('woff2');
+//    }
+//}
+
+@font-face {
+    font-family: $primary-ff;
+    font-display: swap;
+    font-style: normal;
+    font-weight: $fw-regular;
+    src: url('https://fonts.gstatic.com/s/roboto/v29/KFOkCnqEu92Fr1MmgVxIIzI.woff2') format('woff2');
+}

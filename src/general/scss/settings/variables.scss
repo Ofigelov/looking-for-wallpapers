@@ -1,0 +1,41 @@
+/*
+    general variables
+
+    examples:
+
+    $transition-default: 0.3s linear;
+
+    $padding-mobile-vertical: 15px;
+    $padding-tablet-vertical: 30px;
+    $padding-desktop-vertical: 70px;
+
+    $container-max-width: 960px;
+    $container-large-max-width: 1140px;
+
+
+*/
+
+$transition-default: 0.3s linear;
+$transition-ease-out-expo: 0.3s easeoutexpo;
+$motion-easing: cubic-bezier(0.4, 0.47, 0.17, 0.98);
+$transition-motion: 0.3s $motion-easing;
+$box-shadow-dark: -1px 0 10px 1px rgba(0, 0, 0, 0.15);
+$box-shadow-light: -1px 0 10px 1px rgba(255, 255, 255, 0.55);
+$default-mobile-side-padding: 30px;
+$default-tablet-side-padding: 40px;
+$default-desktop-side-padding: 50px;
+$layer-navbar: 100;
+$layer-overlay: 300;
+$layer-element-spinner: 150;
+$layer-modal: 500;
+$container-max-width: 1920px;
+$default-mobile-vertical-gap-between-components: 60px;
+$default-desktop-vertical-gap-between-components: 160px;
+
+// Share btn
+$share-btn-size: 48px;
+$share-btn-size-small: 41px;
+$share-btn-gap: 1px;
+
+$icon-arrow-down: 'data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><path fill="#{rgba($color-black, 0.99)}" d="M26.1 5.7L14 19.7 1.9 5.7.1 7.3l13.9 16 13.9-16z"/></svg>';
+$icon-arrow-up: 'data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);" viewBox="0 0 28 28"><path fill="#{rgba($color-black, 0.99)}" d="M26.1 5.7L14 19.7 1.9 5.7.1 7.3l13.9 16 13.9-16z"/></svg>';

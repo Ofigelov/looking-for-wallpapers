@@ -1,0 +1,3 @@
+@function col($number) {
+    @return calc(var(--container-width) / var(--grid-columns) * #{$number});
+}
