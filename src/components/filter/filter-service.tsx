@@ -34,8 +34,11 @@ export const FilterService = ({
         isLoading: takeFirstFromApi,
         appliedFilters: initialFilters,
         items: initialItems,
+        pagination: {
+            currentPage: 1,
+        },
     });
-    const { isLoading, appliedFilters, items, isFailedLoading } = filterState;
+    const { isLoading, appliedFilters, items, isFailedLoading, pagination } = filterState;
     const _sendRequest = (
         _options: AvailableOptions,
         ignoreOther?: boolean,
@@ -56,7 +59,6 @@ export const FilterService = ({
             cancelToken: axiosSource.token,
         })
             .then(({ data }: AxiosResponse<IApiResponse>) => {
-                console.log(data);
                 setState({
                     ...filterState,
                     items: addResultToExistedItems ? [...items, ...data] : data,
@@ -77,7 +79,6 @@ export const FilterService = ({
     };
     const setFilter = (_options: AvailableOptions, addResultToExistedItems = false): void => {
         if (isLoading) cancelRequest();
-        if (!_options.currentPage) _options.currentPage = '';
         _sendRequest(_options, false, addResultToExistedItems);
     };
     const clearFilters = (): void => {
@@ -96,6 +97,7 @@ export const FilterService = ({
                 appliedFilters,
                 setFilter,
                 clearFilters,
+                pagination,
             }}
         >
             {children}

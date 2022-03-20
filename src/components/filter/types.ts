@@ -24,10 +24,7 @@ export interface IFilterOption {
 }
 
 export interface IPagination {
-    totalPages: number;
     currentPage: number;
-    totalElements: number;
-    elementsOnCurrentPage: number;
 }
 
 export interface IFilterService {
@@ -43,6 +40,7 @@ export interface IFilterServiceState {
     isLoading: boolean;
     isFailedLoading: boolean;
     appliedFilters: AvailableOptions;
+    pagination: IPagination;
     items: KonaPost[];
 }
 

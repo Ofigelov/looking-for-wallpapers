@@ -1,12 +1,28 @@
 .kona-grid {
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fill, 150px);
-    display: grid;
-    justify-content: space-between;
-    list-style: none;
+    position: relative;
+
+    &__list {
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fill, 150px);
+        display: grid;
+        justify-content: space-between;
+        list-style: none;
+    }
 
     &__item {
         display: block;
         list-style: none;
+    }
+
+    &__spinner {
+        top: auto;
+        bottom: 0;
+    }
+
+    &__load-more {
+        margin-top: 20px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
 }

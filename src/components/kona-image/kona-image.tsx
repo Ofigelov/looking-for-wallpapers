@@ -6,18 +6,30 @@ export const KonaImage = ({
     preview_height,
     preview_width,
     tags,
+    jpeg_width,
+    jpeg_height,
+    jpeg_url,
 }: IKonaImage): JSX.Element => {
     return (
-        <div className="kona-image">
-            <img
-                className="lazyload"
-                data-src={preview_url}
-                loading="lazy"
-                alt={tags}
-                width={preview_width}
-                height={preview_height}
-            />
-        </div>
+        <a
+            href={jpeg_url}
+            className="kona-image"
+            download
+            target="_blank"
+            rel="noreferrer noopener"
+        >
+            <div className="kona-image__inner">
+                <img
+                    className="lazyload"
+                    data-src={preview_url}
+                    loading="lazy"
+                    alt={tags}
+                    width={preview_width}
+                    height={preview_height}
+                />
+            </div>
+            <div className="kona-image__size">{`${jpeg_width} x ${jpeg_height}`}</div>
+        </a>
     );
 };
 

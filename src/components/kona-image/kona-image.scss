@@ -1,20 +1,47 @@
-
 .kona-image {
-    position: relative;
-    width: 150px;
+    $this: &;
 
-    &::before {
-        content: '';
-        display: block;
-        padding-top: 56.5%;
+    display: block;
+    text-decoration: none;
+
+    &__inner {
+        position: relative;
+        z-index: 0;
+        width: 150px;
+
+        &::before {
+            content: '';
+            display: block;
+            padding-top: 56.5%;
+        }
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease-out;
+            pointer-events: none;
+        }
+
+        @include hover-focus {
+            z-index: 1;
+
+            img {
+                transform: scale(3);
+            }
+        }
     }
 
-    img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+    &__size {
+        text-align: center;
+        color: $color-pinky;
+        font-size: 10px;
+        line-height: 1;
+        padding: 2px 5px;
+        text-decoration: none;
+        background-color: lighten($color-dark, 10);
     }
 }
