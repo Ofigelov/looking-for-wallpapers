@@ -64,6 +64,9 @@ export const FilterService = ({
                     items: addResultToExistedItems ? [...items, ...data] : data,
                     isLoading: false,
                     isFailedLoading: false,
+                    pagination: {
+                        currentPage: newFilters.page || pagination.currentPage,
+                    },
                     appliedFilters: newFilters,
                 });
             })
