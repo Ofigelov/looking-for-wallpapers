@@ -10,6 +10,6 @@ export const pages: Page[] = [
     {
         name: 'index',
         component: HomePage
-    }
+    },
 ]
 

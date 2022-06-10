@@ -5,7 +5,7 @@ import { IObject } from 'general/js/params-to-query';
 export interface AvailableOptions extends IObject {
     limit?: number;
     page?: number;
-    tags?: string;
+    tags?: string[];
 }
 
 export type IApiResponse = KonaPost[];

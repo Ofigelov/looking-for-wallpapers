@@ -66,7 +66,7 @@
 }
 
 @mixin active-hover-focus() {
-    .is-active,
+    &.is-active,
     [data-whatintent='mouse'] &:hover,
     [data-whatintent='keyboard'] &:focus,
     [data-whatinput='keyboard'] &:focus {

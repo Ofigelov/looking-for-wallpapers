@@ -1,6 +1,6 @@
-import { DcBaseComponent } from '@deleteagency/dc';
+import React from 'react';
 import { render } from 'react-dom';
-import { createElement } from 'react';
+import { DcBaseComponent } from '@deleteagency/dc';
 import { KonaFilter } from 'components/kona-grid/kona-filter';
 
 export class KonaGridComponent extends DcBaseComponent {
@@ -8,6 +8,6 @@ export class KonaGridComponent extends DcBaseComponent {
     static requiredRefs = [];
 
     init() {
-        render(createElement(KonaFilter, null), this.element);
+        render(<KonaFilter />, this.element);
     }
 }

@@ -1,7 +1,18 @@
 .kona-grid {
     position: relative;
+    display: grid;
+
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 'filters grid' 'filters loadmore';
+    align-items: flex-start;
+
+    &__filters {
+        grid-area: filters;
+    }
 
     &__list {
+        grid-area: grid;
         grid-gap: 20px;
         grid-template-columns: repeat(auto-fill, 150px);
         display: grid;
@@ -20,6 +31,7 @@
     }
 
     &__load-more {
+        grid-area: loadmore;
         margin-top: 20px;
         display: flex;
         width: 100%;
