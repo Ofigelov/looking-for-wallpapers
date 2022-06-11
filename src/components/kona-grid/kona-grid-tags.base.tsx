@@ -2,19 +2,32 @@ import React, { useMemo, useContext } from 'react';
 import cn from 'classnames';
 import { FilterContext } from 'components/filter/filter-service';
 
-export const KonaGridTagsBase = ({ tags, id }: IKonaGridTagsBase): JSX.Element => {
+export type IUseTags = () => [(tag: string) => void, Set<string>];
+
+const useDefaultTags: IUseTags = () => {
     const { appliedFilters, setFilter } = useContext(FilterContext);
     const filterTags = useMemo(() => new Set(appliedFilters.tags || []), [appliedFilters]);
 
-    const onClick = (tag: string) => {
-        if (filterTags.has(tag)) {
-            filterTags.delete(tag);
-        } else {
-            filterTags.add(tag);
-        }
+    return [
+        (tag: string) => {
+            if (filterTags.has(tag)) {
+                filterTags.delete(tag);
+            } else {
+                filterTags.add(tag);
+            }
 
-        setFilter({ tags: [...filterTags] });
-    };
+            setFilter({ tags: [...filterTags] });
+        },
+        filterTags,
+    ];
+};
+
+export const KonaGridTagsBase = ({
+    tags,
+    id,
+    useTags = useDefaultTags,
+}: IKonaGridTagsBase): JSX.Element => {
+    const [onClick, filterTags] = useTags();
 
     return (
         <ul className="kona-grid-tags">
@@ -36,4 +49,5 @@ export const KonaGridTagsBase = ({ tags, id }: IKonaGridTagsBase): JSX.Element =
 interface IKonaGridTagsBase {
     id: string;
     tags: string[];
+    useTags?: IUseTags;
 }

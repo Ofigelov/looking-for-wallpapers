@@ -5,6 +5,7 @@ import { Spinner } from 'components/spinner/js/spinner';
 import { LoadMore } from 'components/kona-grid/load-more';
 import { KonaGridTags } from 'components/kona-grid/kona-grid-tags';
 import { KonaGridSearch } from 'components/kona-grid/kona-grid-search';
+import { KonaRatings } from 'components/kona-grid/kona-ratings';
 
 export const KonaGrid = (): JSX.Element => {
     const { items, isLoading } = useContext(FilterContext);
@@ -13,6 +14,7 @@ export const KonaGrid = (): JSX.Element => {
         <div className="kona-grid">
             <div className="kona-grid__filters">
                 <KonaGridSearch />
+                <KonaRatings />
                 <KonaGridTags />
             </div>
             <ul className="kona-grid__list">

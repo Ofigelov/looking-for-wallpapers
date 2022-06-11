@@ -11,5 +11,10 @@ export const KonaGridTags = (): JSX.Element => {
         [items]
     );
 
-    return <KonaGridTagsBase tags={tags} id={id} />;
+    return (
+        <div>
+            <h3>TagsCloud</h3>
+            <KonaGridTagsBase tags={tags} id={id} />
+        </div>
+    );
 };

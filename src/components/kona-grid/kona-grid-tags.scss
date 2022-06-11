@@ -18,6 +18,7 @@
         color: inherit;
         transition: color 0.3s linear;
         cursor: pointer;
+        padding: 0;
 
         @include active-hover-focus {
             color: lightgreen;
