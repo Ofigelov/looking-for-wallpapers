@@ -3,9 +3,19 @@ export interface IObject {
 }
 
 export const paramsToQuery = (params: IObject) => {
-    const query = new URLSearchParams();
+    let _query = '';
+    const join = (name: string, value: string | boolean | number) => {
+        _query += `${_query.length ? '&' : ''}${name}=${value}`;
+    };
     Object.entries(params).forEach(([key, val]) => {
-        if (val) query.append(key, val.toString());
+        if (val && typeof val === 'object' && val.length > 0) {
+            const res = val.join('+');
+            join(key, decodeURIComponent(res));
+            return;
+        }
+        if (val) {
+            join(key, val.toString());
+        }
     });
-    return query;
+    return _query;
 };
