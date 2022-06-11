@@ -10,7 +10,7 @@ export const KonaGridSearch = (): JSX.Element => {
     const onSubmit = (e: FormEvent) => {
         e.preventDefault();
 
-        const formattedValue = value.replace(' ', '_').toLowerCase();
+        const formattedValue = value.replace(/\s/g, '_').toLowerCase();
         setValue('');
         if (filterTags.has(formattedValue)) return;
         setFilter({ tags: [formattedValue, ...filterTags] });
@@ -25,6 +25,7 @@ export const KonaGridSearch = (): JSX.Element => {
 
     return (
         <article className="kona-grid-search">
+            <h3>Search</h3>
             <form className="kona-grid-search__form" onSubmit={onSubmit}>
                 <input
                     className="kona-grid-search__input"
