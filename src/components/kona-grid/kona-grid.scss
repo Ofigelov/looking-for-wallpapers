@@ -4,11 +4,16 @@
 
     grid-template-columns: 300px 1fr;
     grid-template-rows: auto 1fr;
+    gap: 15px;
     grid-template-areas: 'filters grid' 'filters loadmore';
     align-items: flex-start;
 
     &__filters {
         grid-area: filters;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
     }
 
     &__list {

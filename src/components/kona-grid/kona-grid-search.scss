@@ -1,0 +1,20 @@
+.kona-grid-search {
+
+    &__form {
+        display: flex;
+        width: 100%;
+    }
+
+    &__input {
+        flex-grow: 1;
+        display: block;
+        appearance: none;
+        border: none;
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    &__btn {
+
+    }
+}
