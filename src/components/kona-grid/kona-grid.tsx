@@ -6,13 +6,14 @@ import { LoadMore } from 'components/kona-grid/load-more';
 import { KonaGridTags } from 'components/kona-grid/kona-grid-tags';
 import { KonaGridSearch } from 'components/kona-grid/kona-grid-search';
 import { KonaRatings } from 'components/kona-grid/kona-ratings';
+import { KonaAppliedTags } from 'components/kona-grid/kona-applied-tags';
 
 export const KonaGrid = (): JSX.Element => {
     const { items, isLoading } = useContext(FilterContext);
-    console.log(items[0]?.id);
     return (
         <div className="kona-grid">
             <div className="kona-grid__filters">
+                <KonaAppliedTags />
                 <KonaGridSearch />
                 <KonaRatings />
                 <KonaGridTags />
@@ -24,7 +25,7 @@ export const KonaGrid = (): JSX.Element => {
                     </li>
                 ))}
             </ul>
-            <Spinner className="kona-grid__spinner" isActive={isLoading} />
+            <Spinner className="kona-grid__spinner" isActive={isLoading} withOverlay />
             {!isLoading && (
                 <div className="kona-grid__load-more">
                     <LoadMore />

@@ -1,6 +1,5 @@
 import React, { useMemo, useState, useContext, FormEvent, useEffect } from 'react';
 import { FilterContext } from 'components/filter/filter-service';
-import { KonaGridTagsBase } from 'components/kona-grid/kona-grid-tags.base';
 
 export const KonaGridSearch = (): JSX.Element => {
     const { appliedFilters, setFilter } = useContext(FilterContext);
@@ -39,7 +38,6 @@ export const KonaGridSearch = (): JSX.Element => {
                     add
                 </button>
             </form>
-            <KonaGridTagsBase tags={searchedTags} id="search" />
         </article>
     );
 };
