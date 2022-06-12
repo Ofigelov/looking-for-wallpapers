@@ -18,7 +18,7 @@
         "stylelint": "stylelint **/*.scss",
         "stylelint:fix": "stylelint **/*.scss --fix",
         "init": "husky install && husky add .husky/pre-commit \"npx lint-staged\"",
-        "proxy": "lcp --proxyUrl https://konachan.net/post.json --proxyPartial posts"
+        "proxy": "lcp --proxyUrl https://konachan.net --proxyPartial api"
     },
     "lint-staged": {
         "**/*.{css,scss}": [
@@ -113,6 +113,7 @@
         "@deleteagency/dc": "4.0.2",
         "@deleteagency/device-observer": "3.0.5",
         "@deleteagency/page-locker": "2.0.7",
+        "@tippyjs/react": "4.2.6",
         "axios": "0.24.0",
         "beautify": "0.0.8",
         "classnames": "2.3.1",
@@ -128,6 +129,7 @@
         "react-dom": "17.0.2",
         "rellax": "1.7.1",
         "slick-carousel": "1.8.1",
+        "tippy.js": "6.3.7",
         "what-input": "5.2.10",
         "wrench": "^1.5.8"
     },

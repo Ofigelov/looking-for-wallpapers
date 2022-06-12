@@ -1,0 +1,29 @@
+.predictive {
+    position: relative;
+    padding: 5px;
+    background-color: $color-dark;
+    border-color: $color-pinky;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    min-height: 30px;
+    min-width: 245px;
+
+    &__list {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    &__btn {
+        @include reset-button;
+
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+        color: $color-white;
+
+        @include hover-focus {
+            background-color: rgba($color-pinky, 0.1);
+        }
+    }
+}

@@ -1,19 +1,25 @@
 import React, { useMemo, useState, useContext, FormEvent, useEffect } from 'react';
 import { FilterContext } from 'components/filter/filter-service';
+import { KonaPredictiveSearch } from 'components/kona-grid/kona-predictive-search';
 
-export const KonaGridSearch = (): JSX.Element => {
+export const KonaGridSearch = ({ predictiveEndpoint }: IKonaGridSearch): JSX.Element => {
     const { appliedFilters, setFilter } = useContext(FilterContext);
     const filterTags = useMemo(() => new Set(appliedFilters.tags || []), [appliedFilters]);
     const [searchedTags, setSearchedTags] = useState<string[]>([]);
     const [value, setValue] = useState('');
+
+    const choose = (text: string) => {
+        setValue('');
+        if (filterTags.has(text)) return;
+        setFilter({ tags: [text, ...filterTags] });
+        setSearchedTags([...searchedTags, text]);
+    };
+
     const onSubmit = (e: FormEvent) => {
         e.preventDefault();
 
         const formattedValue = value.replace(/\s/g, '_').toLowerCase();
-        setValue('');
-        if (filterTags.has(formattedValue)) return;
-        setFilter({ tags: [formattedValue, ...filterTags] });
-        setSearchedTags([...searchedTags, formattedValue]);
+        choose(formattedValue);
     };
 
     useEffect(() => {
@@ -26,14 +32,16 @@ export const KonaGridSearch = (): JSX.Element => {
         <article className="kona-grid-search">
             <h3>Search</h3>
             <form className="kona-grid-search__form" onSubmit={onSubmit}>
-                <input
-                    className="kona-grid-search__input"
-                    type="search"
-                    value={value}
-                    onChange={(e) => {
-                        setValue(e.currentTarget.value);
-                    }}
-                />
+                <KonaPredictiveSearch endpoint={predictiveEndpoint} value={value} choose={choose}>
+                    <input
+                        className="kona-grid-search__input"
+                        type="search"
+                        value={value}
+                        onChange={(e) => {
+                            setValue(e.currentTarget.value);
+                        }}
+                    />
+                </KonaPredictiveSearch>
                 <button className="kona-grid-search__btn btn-primary" type="submit">
                     add
                 </button>
@@ -41,3 +49,7 @@ export const KonaGridSearch = (): JSX.Element => {
         </article>
     );
 };
+
+interface IKonaGridSearch {
+    predictiveEndpoint: string;
+}

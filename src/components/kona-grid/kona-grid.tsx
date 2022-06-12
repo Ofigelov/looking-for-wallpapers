@@ -9,13 +9,13 @@ import { KonaRatings } from 'components/kona-grid/kona-ratings';
 import { KonaAppliedTags } from 'components/kona-grid/kona-applied-tags';
 import { KonaSizes } from 'components/kona-grid/kona-sizes';
 
-export const KonaGrid = (): JSX.Element => {
+export const KonaGrid = ({ predictiveEndpoint }: IFilter): JSX.Element => {
     const { items, isLoading } = useContext(FilterContext);
     return (
         <div className="kona-grid">
             <div className="kona-grid__filters">
                 <KonaAppliedTags />
-                <KonaGridSearch />
+                <KonaGridSearch predictiveEndpoint={predictiveEndpoint} />
                 <KonaSizes />
                 <KonaRatings />
                 <KonaGridTags />
@@ -36,3 +36,7 @@ export const KonaGrid = (): JSX.Element => {
         </div>
     );
 };
+
+interface IFilter {
+    predictiveEndpoint: string;
+}
