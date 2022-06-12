@@ -1,8 +1,9 @@
 import React, { useMemo, useContext } from 'react';
 import cn from 'classnames';
 import { FilterContext } from 'components/filter/filter-service';
+import { getTagsName } from 'components/kona-grid/tags-dictionary';
 
-export type IUseTags = () => [(tag: string) => void, Set<string>];
+export type IUseTags = (tags?: string[]) => [(tag: string) => void, Set<string>];
 
 const useDefaultTags: IUseTags = () => {
     const { appliedFilters, setFilter } = useContext(FilterContext);
@@ -27,7 +28,7 @@ export const KonaGridTagsBase = ({
     id,
     useTags = useDefaultTags,
 }: IKonaGridTagsBase): JSX.Element => {
-    const [onClick, filterTags] = useTags();
+    const [onClick, filterTags] = useTags(tags);
 
     return (
         <ul className="kona-grid-tags">
@@ -37,8 +38,9 @@ export const KonaGridTagsBase = ({
                         className={cn('kona-grid-tags__btn', { 'is-active': filterTags.has(tag) })}
                         onClick={() => onClick(tag)}
                         type="button"
+                        title={tag}
                     >
-                        {tag}
+                        {getTagsName(tag)}
                     </button>
                 </li>
             ))}

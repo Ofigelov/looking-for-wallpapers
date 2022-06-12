@@ -7,6 +7,7 @@ import { KonaGridTags } from 'components/kona-grid/kona-grid-tags';
 import { KonaGridSearch } from 'components/kona-grid/kona-grid-search';
 import { KonaRatings } from 'components/kona-grid/kona-ratings';
 import { KonaAppliedTags } from 'components/kona-grid/kona-applied-tags';
+import { KonaSizes } from 'components/kona-grid/kona-sizes';
 
 export const KonaGrid = (): JSX.Element => {
     const { items, isLoading } = useContext(FilterContext);
@@ -15,6 +16,7 @@ export const KonaGrid = (): JSX.Element => {
             <div className="kona-grid__filters">
                 <KonaAppliedTags />
                 <KonaGridSearch />
+                <KonaSizes />
                 <KonaRatings />
                 <KonaGridTags />
             </div>
