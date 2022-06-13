@@ -17,6 +17,7 @@ export const KonaImage = ({
             download
             target="_blank"
             rel="noreferrer noopener"
+            title={tags}
         >
             <div className="kona-image__inner">
                 <img
