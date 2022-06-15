@@ -21,6 +21,8 @@ const cancelRequest = (reason = 'user interacted') => {
 
 export const FilterContext = React.createContext({} as ContextContent);
 
+const PAGE_RESET = { page: undefined };
+
 export const FilterService = ({
     children,
     endpoint,
@@ -46,7 +48,7 @@ export const FilterService = ({
     ): void => {
         const newFilters = ignoreOther
             ? Object.assign(_options, requiredParams)
-            : { ...appliedFilters, ..._options, ...requiredParams };
+            : { ...appliedFilters, ...PAGE_RESET, ..._options, ...requiredParams };
         const oldFilters = clone(appliedFilters);
         removeEmptyKeys(newFilters);
         setState({
