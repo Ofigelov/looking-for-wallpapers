@@ -3,6 +3,7 @@
 
     display: block;
     text-decoration: none;
+    position: relative;
 
     &__inner {
         position: relative;
@@ -32,6 +33,33 @@
             img {
                 transform: scale(3);
             }
+        }
+    }
+
+    &__tags {
+        @include pretty-scroll($color-pinky, 0.2);
+
+        width: 100%;
+        overflow-x: auto;
+        display: flex;
+        gap: 10px;
+        scroll-snap-type: x mandatory;
+    }
+
+    &__tag {
+        @include reset-button();
+
+        padding: 0;
+        cursor: pointer;
+        scroll-snap-align: start;
+        font-size: 12px;
+        line-height: 1.2;
+        color: $color-white;
+        transition: color 0.3s linear;
+        white-space: nowrap;
+
+        @include hover-focus {
+            color: lightgreen;
         }
     }
 

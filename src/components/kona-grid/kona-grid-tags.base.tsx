@@ -5,7 +5,7 @@ import { getTagsName } from 'components/kona-grid/tags-dictionary';
 
 export type IUseTags = (tags?: string[]) => [(tag: string) => void, Set<string>];
 
-const useDefaultTags: IUseTags = () => {
+export const useDefaultTags: IUseTags = () => {
     const { appliedFilters, setFilter } = useContext(FilterContext);
     const filterTags = useMemo(() => new Set(appliedFilters.tags || []), [appliedFilters]);
 

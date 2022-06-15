@@ -111,8 +111,8 @@
     scrollbar-color: rgba($color, $opacity);
 
     &::-webkit-scrollbar {
-        width: 5px;
-        height: 5px;
+        width: 2px;
+        height: 2px;
     }
 
     &::-webkit-scrollbar-button {

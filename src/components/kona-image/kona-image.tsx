@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { KonaPost } from 'components/kona-image/types';
+import { useDefaultTags } from 'components/kona-grid/kona-grid-tags.base';
 
 export const KonaImage = ({
     preview_url,
@@ -10,16 +11,18 @@ export const KonaImage = ({
     jpeg_height,
     jpeg_url,
 }: IKonaImage): JSX.Element => {
+    const _tags = useMemo(() => tags.split(' '), []);
+    const [onClick] = useDefaultTags();
     return (
-        <a
-            href={jpeg_url}
-            className="kona-image"
-            download
-            target="_blank"
-            rel="noreferrer noopener"
-            title={tags}
-        >
-            <div className="kona-image__inner">
+        <article className="kona-image">
+            <a
+                className="kona-image__inner"
+                href={jpeg_url}
+                download
+                target="_blank"
+                rel="noreferrer noopener"
+                title={tags}
+            >
                 <img
                     className="lazyload"
                     data-src={preview_url}
@@ -28,9 +31,22 @@ export const KonaImage = ({
                     width={preview_width}
                     height={preview_height}
                 />
-            </div>
+            </a>
+            <ul className="kona-image__tags">
+                {_tags.map((tag, index) => (
+                    <li key={index + tag}>
+                        <button
+                            className="kona-image__tag"
+                            type="button"
+                            onClick={() => onClick(tag)}
+                        >
+                            {tag}
+                        </button>
+                    </li>
+                ))}
+            </ul>
             <div className="kona-image__size">{`${jpeg_width} x ${jpeg_height}`}</div>
-        </a>
+        </article>
     );
 };
 
