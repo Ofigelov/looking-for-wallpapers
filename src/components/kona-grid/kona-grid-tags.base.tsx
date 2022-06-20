@@ -11,13 +11,14 @@ export const useDefaultTags: IUseTags = () => {
 
     return [
         (tag: string) => {
-            if (filterTags.has(tag)) {
-                filterTags.delete(tag);
+            const _filterTags = new Set(appliedFilters.tags || []);
+            if (_filterTags.has(tag)) {
+                _filterTags.delete(tag);
             } else {
-                filterTags.add(tag);
+                _filterTags.add(tag);
             }
 
-            setFilter({ tags: [...filterTags] });
+            setFilter({ tags: [..._filterTags] });
         },
         filterTags,
     ];

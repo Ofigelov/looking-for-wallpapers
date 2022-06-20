@@ -68,6 +68,7 @@ export const DefaultLayout = ({
             </head>
             <body className="body">
                 {svgFiles?.length && !svg.length && <Svgs filePaths={svg} files={svgFiles} />}
+                <div data-dc-notifications />
                 {children}
                 {!!mjs.length && <Scripts filePaths={mjs} />}
                 {!mjs.length && js.length && <Scripts filePaths={js} />}

@@ -10,6 +10,7 @@ import {
 } from 'components/filter/types';
 import { removeEmptyKeys } from 'general/js/remove-emty-keys';
 import { paramsToQuery } from 'general/js/params-to-query';
+import { pushNewErrorNotification } from 'components/notifications/notification-store';
 
 const api = axios.create({ timeout: 120000 });
 let axiosSource = axios.CancelToken.source();
@@ -51,6 +52,10 @@ export const FilterService = ({
             : { ...appliedFilters, ...PAGE_RESET, ..._options, ...requiredParams };
         const oldFilters = clone(appliedFilters);
         removeEmptyKeys(newFilters);
+        if (newFilters.tags && newFilters.tags.length > 4) {
+            pushNewErrorNotification("Filters API can't work with more than 4 tags");
+            return;
+        }
         setState({
             ...filterState,
             isLoading: true,

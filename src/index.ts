@@ -6,6 +6,7 @@ import 'general/js/what-input';
 
 /* components */
 import 'components/lazysizes';
+import 'components/notifications';
 import 'components/spinner';
 import 'components/kona-image';
 import 'components/kona-grid';

@@ -1,0 +1,36 @@
+.notification-shower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: $layer-notification;
+    transform: translateY(-100%);
+    width: 100%;
+    padding: 20px;
+    background-color: lighten($color-green, 20);
+    box-shadow: 0 2px 100px 0 $color-black;
+    color: $color-white;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.3s linear;
+
+
+    @include desktop {
+        font-size: 24px;
+    }
+
+    &--error {
+        background-color: red;
+    }
+
+    &.is-active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    a {
+        color: inherit;
+        font-size: inherit;
+    }
+}
