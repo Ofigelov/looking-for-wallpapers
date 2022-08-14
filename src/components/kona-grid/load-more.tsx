@@ -10,9 +10,11 @@ export const LoadMore = (): JSX.Element | null => {
     } = useContext(FilterContext);
 
     const onClick = () => {
+        // @ts-ignore
         setFilter({ page: currentPage + 1 }, true);
     };
 
+    // @ts-ignore
     const isHided = useMemo(() => items.length < currentPage * limit, [items]);
 
     if (isHided) return null;

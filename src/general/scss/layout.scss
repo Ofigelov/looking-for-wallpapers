@@ -20,6 +20,7 @@ html {
 
     &.is-blocked {
         overflow: hidden;
+        padding-right: 17px;
     }
 
     &.is-blocked-touch {
@@ -118,4 +119,15 @@ figure {
 
 [data-whatintent='touch'] *:focus {
     outline: none;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vw;
+    padding: 0;
+    background: rgba(0,0,0, 0.3);
+    border: 0;
 }

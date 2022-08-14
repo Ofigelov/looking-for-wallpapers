@@ -10,6 +10,7 @@ import 'components/notifications';
 import 'components/spinner';
 import 'components/kona-image';
 import 'components/kona-grid';
+import 'components/rule-grid';
 
 /* require svg */
 // @ts-ignore

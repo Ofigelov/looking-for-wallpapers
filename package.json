@@ -18,7 +18,8 @@
         "stylelint": "stylelint **/*.scss",
         "stylelint:fix": "stylelint **/*.scss --fix",
         "init": "husky install && husky add .husky/pre-commit \"npx lint-staged\"",
-        "proxy": "lcp --proxyUrl https://konachan.net --proxyPartial api"
+        "proxy": "lcp --proxyUrl https://konachan.net --proxyPartial api",
+        "proxy:video": "lcp --proxyUrl https://api-cdn-mp4.rule34.xxx --proxyPartial api"
     },
     "lint-staged": {
         "**/*.{css,scss}": [
@@ -120,6 +121,7 @@
         "core-js": "3.19.2",
         "effector": "22.1.2",
         "effector-react": "22.0.6",
+        "focus-trap-react": "^9.0.2",
         "js-cookie": "3.0.1",
         "lazysizes": "5.3.2",
         "lodash": "4.17.21",

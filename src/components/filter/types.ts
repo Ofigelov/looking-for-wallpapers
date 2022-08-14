@@ -4,7 +4,7 @@ import { IObject } from 'general/js/params-to-query';
 
 export interface AvailableOptions extends IObject {
     limit?: number;
-    page?: number;
+    page?: number | string;
     tags?: string[];
 }
 
@@ -24,7 +24,7 @@ export interface IFilterOption {
 }
 
 export interface IPagination {
-    currentPage: number;
+    currentPage: number | string;
 }
 
 export interface IFilterService {
