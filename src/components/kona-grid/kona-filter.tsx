@@ -1,6 +1,7 @@
 import React from 'react';
 import { FilterService } from 'components/filter/filter-service';
 import { KonaGrid } from 'components/kona-grid/kona-grid';
+import './index.scss';
 
 const ROOT_ENDPOINT = 'http://localhost:8010/api';
 

@@ -26,8 +26,8 @@
         $size: 50px;
 
         position: absolute;
-        top: calc(50% - #{$size / 2});
-        left: calc(50% - #{$size / 2});
+        top: calc(50% - #{calc($size / 2)});
+        left: calc(50% - #{calc($size / 2)});
         display: none;
         width: $size;
         height: $size;

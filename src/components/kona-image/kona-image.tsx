@@ -1,3 +1,4 @@
+import './index.scss';
 import React, { useMemo } from 'react';
 import { KonaPost } from 'components/kona-image/types';
 import { useDefaultTags } from 'components/kona-grid/kona-grid-tags.base';
