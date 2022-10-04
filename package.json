@@ -4,6 +4,7 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
+        "esbuild": "",
         "clean": "rimraf ./dist/**/*",
         "server": "npm run clean && webpack serve --env server --mode=development --progress",
         "dev": "npm run clean && webpack --mode=development --progress",
@@ -120,6 +121,7 @@
         "core-js": "3.19.2",
         "effector": "22.1.2",
         "effector-react": "22.0.6",
+        "esbuild": "^0.15.6",
         "js-cookie": "3.0.1",
         "lazysizes": "5.3.2",
         "lodash": "4.17.21",
