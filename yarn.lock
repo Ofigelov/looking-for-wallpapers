@@ -610,6 +610,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ofigelov/mobx-search-params-service@npm:0.0.2":
+  version: 0.0.2
+  resolution: "@ofigelov/mobx-search-params-service@npm:0.0.2"
+  peerDependencies:
+    mobx: ">6.0.0"
+    remeda: ">2.0.0"
+  checksum: 10c0/5410144bb8e9c5dd358432c692bcae31418168273df30af9ebe2a578d262b1c4239c38b7fa38f628f920bf70ea5a6970e34e608b2005f4792248bdc478a20bfe
+  languageName: node
+  linkType: hard
+
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
@@ -2076,6 +2086,7 @@ __metadata:
   resolution: "lfp@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.17.0"
+    "@ofigelov/mobx-search-params-service": "npm:0.0.2"
     "@tippyjs/react": "npm:^4.2.6"
     "@types/node": "npm:^22.10.2"
     "@types/react": "npm:19.0.2"
@@ -2089,6 +2100,7 @@ __metadata:
     eslint-plugin-react-refresh: "npm:^0.4.16"
     globals: "npm:^15.13.0"
     lightningcss: "npm:^1.28.2"
+    mobx: "npm:6.13.5"
     nanoid: "npm:^5.0.9"
     prettier: "npm:3.4.2"
     react: "npm:19.0.0"
@@ -2399,6 +2411,13 @@ __metadata:
   bin:
     mkdirp: dist/cjs/src/bin.js
   checksum: 10c0/9f2b975e9246351f5e3a40dcfac99fcd0baa31fbfab615fe059fb11e51f10e4803c63de1f384c54d656e4db31d000e4767e9ef076a22e12a641357602e31d57d
+  languageName: node
+  linkType: hard
+
+"mobx@npm:6.13.5":
+  version: 6.13.5
+  resolution: "mobx@npm:6.13.5"
+  checksum: 10c0/43691c836363aa1f13c44e43c86ab89fc8f4b83ef408bc6c68d799260e74b4ff08ebba2ef16bda447c6b7bca3558768e15927c0b21ffbb10e99b610783f28859
   languageName: node
   linkType: hard
 

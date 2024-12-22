@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ofigelov/mobx-search-params-service": "0.0.2",
     "@tippyjs/react": "^4.2.6",
     "axios": "^1.7.9",
     "classnames": "^2.5.1",
+    "mobx": "6.13.5",
     "nanoid": "^5.0.9",
     "react": "19.0.0",
     "react-dom": "19.0.0",
