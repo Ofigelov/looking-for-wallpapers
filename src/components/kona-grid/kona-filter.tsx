@@ -1,7 +1,7 @@
 import { FilterService } from "../filter/filter-service";
 import { KonaGrid } from "./kona-grid";
 
-const ROOT_ENDPOINT = "http://localhost:8010/api";
+const ROOT_ENDPOINT = "";
 
 export const KonaFilter = () => {
   return (
