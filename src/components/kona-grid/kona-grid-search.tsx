@@ -3,6 +3,7 @@ import styles from "./kona-grid-search.module.scss";
 import { FilterContext } from "../filter/filter-service";
 import { KonaPredictiveSearch } from "./kona-predictive-search";
 import cn from "classnames";
+import { Button } from "../Button";
 
 export const KonaGridSearch = ({ predictiveEndpoint }: IKonaGridSearch) => {
   const { appliedFilters, setFilter } = useContext(FilterContext);
@@ -38,16 +39,16 @@ export const KonaGridSearch = ({ predictiveEndpoint }: IKonaGridSearch) => {
   }, [appliedFilters]);
 
   return (
-    <article className={styles.konaGridSearch}>
+    <article className={styles.wrapper}>
       <h3>Search</h3>
-      <form className={styles.konaGridSearch__form} onSubmit={onSubmit}>
+      <form className={styles.wrapper__form} onSubmit={onSubmit}>
         <KonaPredictiveSearch
           endpoint={predictiveEndpoint}
           value={value}
           choose={choose}
         >
           <input
-            className={styles.konaGridSearch__input}
+            className={styles.wrapper__input}
             type="search"
             value={value}
             onChange={(e) => {
@@ -55,12 +56,9 @@ export const KonaGridSearch = ({ predictiveEndpoint }: IKonaGridSearch) => {
             }}
           />
         </KonaPredictiveSearch>
-        <button
-          className={cn(styles.konaGridSearch__btn, "btn-primary")}
-          type="submit"
-        >
+        <Button className={cn(styles.wrapper__btn)} type="submit">
           add
-        </button>
+        </Button>
       </form>
     </article>
   );
