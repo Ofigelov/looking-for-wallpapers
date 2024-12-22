@@ -610,6 +610,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ofigelov/mobx-query@npm:0.0.1":
+  version: 0.0.1
+  resolution: "@ofigelov/mobx-query@npm:0.0.1"
+  peerDependencies:
+    mobx: ">6.9.0"
+  checksum: 10c0/4872f7d25eb17b30d035bd4ab8e9acfbab3b8382d84720d21ea45f7375094bc7284fcc546fd13f7a6ef869a7d0deac89d31dd46f65442cb8fffe90d0dd51a8d6
+  languageName: node
+  linkType: hard
+
 "@ofigelov/mobx-search-params-service@npm:0.0.2":
   version: 0.0.2
   resolution: "@ofigelov/mobx-search-params-service@npm:0.0.2"
@@ -2086,6 +2095,7 @@ __metadata:
   resolution: "lfp@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.17.0"
+    "@ofigelov/mobx-query": "npm:0.0.1"
     "@ofigelov/mobx-search-params-service": "npm:0.0.2"
     "@tippyjs/react": "npm:^4.2.6"
     "@types/node": "npm:^22.10.2"

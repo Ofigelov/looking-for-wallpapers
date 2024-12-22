@@ -13,6 +13,9 @@ console.log(PROXY_URL);
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
+  optimizeDeps: {
+    include: ["@ofigelov/mobx-query", "@ofigelov/mobx-search-params-service"],
+  },
   server: {
     proxy: {
       "^/post/*": PROXY_URL,
