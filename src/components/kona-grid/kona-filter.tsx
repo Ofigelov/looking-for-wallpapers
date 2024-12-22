@@ -1,19 +1,17 @@
-import React from 'react';
-import { FilterService } from 'components/filter/filter-service';
-import { KonaGrid } from 'components/kona-grid/kona-grid';
-import './index.scss';
+import { FilterService } from "../filter/filter-service";
+import { KonaGrid } from "./kona-grid";
 
-const ROOT_ENDPOINT = 'http://localhost:8010/api';
+const ROOT_ENDPOINT = "http://localhost:8010/api";
 
-export const KonaFilter = (): JSX.Element => {
-    return (
-        <FilterService
-            endpoint={`${ROOT_ENDPOINT}/post.json`}
-            initialFilters={{ tags: ['rating:safe'] }}
-            requiredParams={{ limit: 100 }}
-            takeFirstFromApi
-        >
-            <KonaGrid predictiveEndpoint={`${ROOT_ENDPOINT}/tag.json`} />
-        </FilterService>
-    );
+export const KonaFilter = () => {
+  return (
+    <FilterService
+      endpoint={`${ROOT_ENDPOINT}/post.json`}
+      initialFilters={{ tags: ["rating:safe"] }}
+      requiredParams={{ limit: 100 }}
+      takeFirstFromApi
+    >
+      <KonaGrid predictiveEndpoint={`${ROOT_ENDPOINT}/tag.json`} />
+    </FilterService>
+  );
 };

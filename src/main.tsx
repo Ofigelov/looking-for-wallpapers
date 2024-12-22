@@ -1,20 +1,12 @@
-import './general/scss/index.scss';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { app } from 'general/js/app';
-import { NotificationShower } from 'components/notifications/notification-shower';
-import { HomePage } from 'components/home-page/home-page';
-import 'general/js/what-input';
-import 'components/lazysizes';
-import 'components/spinner';
+import { createRoot } from "react-dom/client";
+import { HomePage } from "./components/home-page/home-page";
+import { StrictMode } from "react";
+import "./general/scss/index.scss";
 
-app.init();
+const root = document.getElementById("root");
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-    <React.StrictMode>
-        <NotificationShower />
-        <main className="main">
-            <HomePage />
-        </main>
-    </React.StrictMode>
+createRoot(root!).render(
+  <StrictMode>
+    <HomePage />
+  </StrictMode>,
 );

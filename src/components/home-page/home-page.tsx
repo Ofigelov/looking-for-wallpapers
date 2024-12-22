@@ -1,10 +1,7 @@
-import React from 'react';
-import { KonaFilter } from 'components/kona-grid/kona-filter';
+import { KonaFilter } from "../kona-grid/kona-filter";
 
-export const HomePage = () => {
-    return (
-        <div className="container">
-            <KonaFilter />
-        </div>
-    );
-};
+export const HomePage = () => (
+  <div className="container">
+    <KonaFilter />
+  </div>
+);

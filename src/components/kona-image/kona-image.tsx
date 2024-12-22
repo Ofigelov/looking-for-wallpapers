@@ -1,54 +1,56 @@
-import './index.scss';
-import React, { useMemo } from 'react';
-import { KonaPost } from 'components/kona-image/types';
-import { useDefaultTags } from 'components/kona-grid/kona-grid-tags.base';
+import { useMemo } from "react";
+import styles from "./kona-image.module.scss";
+import { KonaPost } from "./types";
+import { useDefaultTags } from "../kona-grid/kona-grid-tags.base";
 
 export const KonaImage = ({
-    preview_url,
-    preview_height,
-    preview_width,
-    tags,
-    jpeg_width,
-    jpeg_height,
-    jpeg_url,
-}: IKonaImage): JSX.Element => {
-    const _tags = useMemo(() => tags.split(' '), []);
-    const [onClick] = useDefaultTags();
-    return (
-        <article className="kona-image">
-            <a
-                className="kona-image__inner"
-                href={jpeg_url}
-                download
-                target="_blank"
-                rel="noreferrer noopener"
-                title={tags}
+  preview_url,
+  preview_height,
+  preview_width,
+  tags,
+  jpeg_width,
+  jpeg_height,
+  jpeg_url,
+}: IKonaImage) => {
+  const _tags = useMemo(() => tags.split(" "), []);
+  const [onClick] = useDefaultTags();
+  return (
+    <article className={styles.konaImage}>
+      <a
+        className={styles.konaImage__inner}
+        href={jpeg_url}
+        download
+        target="_blank"
+        rel="noreferrer noopener"
+        title={tags}
+      >
+        <img
+          className="lazyload"
+          src={preview_url}
+          loading="lazy"
+          alt={tags}
+          width={preview_width}
+          height={preview_height}
+        />
+      </a>
+      <ul className={styles.konaImage__tags}>
+        {_tags.map((tag, index) => (
+          <li key={index + tag}>
+            <button
+              className={styles.konaImage__tag}
+              type="button"
+              onClick={() => onClick(tag)}
             >
-                <img
-                    className="lazyload"
-                    data-src={preview_url}
-                    loading="lazy"
-                    alt={tags}
-                    width={preview_width}
-                    height={preview_height}
-                />
-            </a>
-            <ul className="kona-image__tags">
-                {_tags.map((tag, index) => (
-                    <li key={index + tag}>
-                        <button
-                            className="kona-image__tag"
-                            type="button"
-                            onClick={() => onClick(tag)}
-                        >
-                            {tag}
-                        </button>
-                    </li>
-                ))}
-            </ul>
-            <div className="kona-image__size">{`${jpeg_width} x ${jpeg_height}`}</div>
-        </article>
-    );
+              {tag}
+            </button>
+          </li>
+        ))}
+      </ul>
+      <div
+        className={styles.konaImage__size}
+      >{`${jpeg_width} x ${jpeg_height}`}</div>
+    </article>
+  );
 };
 
 type IKonaImage = KonaPost;
