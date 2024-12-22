@@ -39,11 +39,11 @@ export const KonaGridTagsBase = ({
   const [onClick, filterTags] = useTags(tags);
 
   return (
-    <ul className={styles.konaGridTags}>
+    <ul className={styles.wrapper}>
       {tags.map((tag, index) => (
-        <li className={styles.konaGridTags__item} key={`${id}_${index}`}>
+        <li className={styles.wrapper__item} key={`${id}_${index}`}>
           <Button
-            className={cn(styles.konaGridTags__btn, {
+            className={cn(styles.wrapper__btn, {
               [styles.isActive]: filterTags.has(tag),
             })}
             onClick={() => onClick(tag)}
