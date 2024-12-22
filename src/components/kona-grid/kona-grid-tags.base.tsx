@@ -3,6 +3,7 @@ import cn from "classnames";
 import { FilterContext } from "../filter/filter-service";
 import { getTagsName } from "./tags-dictionary";
 import styles from "./kona-grid-tags.module.scss";
+import { Button } from "../Button";
 
 export type IUseTags = (
   tags?: string[],
@@ -41,16 +42,15 @@ export const KonaGridTagsBase = ({
     <ul className={styles.konaGridTags}>
       {tags.map((tag, index) => (
         <li className={styles.konaGridTags__item} key={`${id}_${index}`}>
-          <button
+          <Button
             className={cn(styles.konaGridTags__btn, {
               [styles.isActive]: filterTags.has(tag),
             })}
             onClick={() => onClick(tag)}
-            type="button"
             title={tag}
           >
             {getTagsName(tag)}
-          </button>
+          </Button>
         </li>
       ))}
     </ul>

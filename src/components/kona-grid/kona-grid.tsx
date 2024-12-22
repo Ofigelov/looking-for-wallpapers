@@ -13,15 +13,15 @@ import styles from "./kona-grid.module.scss";
 export const KonaGrid = ({ predictiveEndpoint }: IFilter) => {
   const { items, isLoading } = useContext(FilterContext);
   return (
-    <div className={styles.konaGrid}>
-      <div className={styles.konaGrid__filters}>
+    <div className={styles.wrapper}>
+      <div className={styles.wrapper__filters}>
         <KonaAppliedTags />
         <KonaGridSearch predictiveEndpoint={predictiveEndpoint} />
         <KonaSizes />
         <KonaRatings />
         <KonaGridTags />
       </div>
-      <ul className={styles.konaGrid__list}>
+      <ul className={styles.wrapper__list}>
         {items.map((item, index) => (
           <li className={styles.konaGrid__item} key={`${index}_${item.id}`}>
             <KonaImage {...item} />
@@ -29,12 +29,12 @@ export const KonaGrid = ({ predictiveEndpoint }: IFilter) => {
         ))}
       </ul>
       <Spinner
-        className={styles.konaGrid__spinner}
+        className={styles.wrapper__spinner}
         isActive={isLoading}
         withOverlay
       />
       {!isLoading && (
-        <div className={styles.konaGrid__loadMore}>
+        <div className={styles.wrapper__loadMore}>
           <LoadMore />
         </div>
       )}

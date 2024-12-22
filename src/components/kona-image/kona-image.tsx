@@ -15,9 +15,9 @@ export const KonaImage = ({
   const _tags = useMemo(() => tags.split(" "), []);
   const [onClick] = useDefaultTags();
   return (
-    <article className={styles.konaImage}>
+    <article className={styles.wrapper}>
       <a
-        className={styles.konaImage__inner}
+        className={styles.wrapper__inner}
         href={jpeg_url}
         download
         target="_blank"
@@ -33,11 +33,11 @@ export const KonaImage = ({
           height={preview_height}
         />
       </a>
-      <ul className={styles.konaImage__tags}>
+      <ul className={styles.wrapper__tags}>
         {_tags.map((tag, index) => (
           <li key={index + tag}>
             <button
-              className={styles.konaImage__tag}
+              className={styles.wrapper__tag}
               type="button"
               onClick={() => onClick(tag)}
             >
@@ -47,7 +47,7 @@ export const KonaImage = ({
         ))}
       </ul>
       <div
-        className={styles.konaImage__size}
+        className={styles.wrapper__size}
       >{`${jpeg_width} x ${jpeg_height}`}</div>
     </article>
   );

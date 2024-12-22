@@ -1,0 +1,15 @@
+@import '../../general/scss/settings';
+
+.wrapper {
+    background-color: transparent;
+    padding: 5px 10px;
+    border: 2px solid $color-pinky;
+    color: $color-white;
+    transition: border-color 0.3s linear;
+    cursor: pointer;
+    font-size: 18px;
+
+    &:focus-visible {
+        border-color: lighten($color-pinky, 10);
+    }
+}
