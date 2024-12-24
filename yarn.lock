@@ -619,13 +619,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ofigelov/mobx-search-params-service@npm:0.0.2":
-  version: 0.0.2
-  resolution: "@ofigelov/mobx-search-params-service@npm:0.0.2"
+"@ofigelov/mobx-search-params-service@npm:0.0.3":
+  version: 0.0.3
+  resolution: "@ofigelov/mobx-search-params-service@npm:0.0.3"
   peerDependencies:
     mobx: ">6.0.0"
     remeda: ">2.0.0"
-  checksum: 10c0/5410144bb8e9c5dd358432c692bcae31418168273df30af9ebe2a578d262b1c4239c38b7fa38f628f920bf70ea5a6970e34e608b2005f4792248bdc478a20bfe
+  checksum: 10c0/7e3a4bcae017d607fb05a7bb49d285dd173b9f1a18d729133a8c252a3b8696930aad6f69d867bdb3add46cbc697fffcdb7a943ac6e817d8bb4a8609f2891c513
+  languageName: node
+  linkType: hard
+
+"@ofigelov/storefactory@npm:0.0.1":
+  version: 0.0.1
+  resolution: "@ofigelov/storefactory@npm:0.0.1"
+  checksum: 10c0/efe178a3c84fe2e6313e4debfd1ac58c456713bbd0ed1958f36c211e7d2badd8f371dde789704cd837d822c4bbdda3fe9beaa9bf47390c3f324d7a8a4c22c82f
   languageName: node
   linkType: hard
 
@@ -2096,7 +2103,8 @@ __metadata:
   dependencies:
     "@eslint/js": "npm:^9.17.0"
     "@ofigelov/mobx-query": "npm:0.0.1"
-    "@ofigelov/mobx-search-params-service": "npm:0.0.2"
+    "@ofigelov/mobx-search-params-service": "npm:0.0.3"
+    "@ofigelov/storefactory": "npm:0.0.1"
     "@tippyjs/react": "npm:^4.2.6"
     "@types/node": "npm:^22.10.2"
     "@types/react": "npm:19.0.2"

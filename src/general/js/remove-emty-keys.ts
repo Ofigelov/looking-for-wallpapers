@@ -1,8 +1,8 @@
-interface IObject {
+type Object = {
   [key: string]: unknown;
-}
+};
 
-export const removeEmptyKeys = (obj: IObject) =>
+export const removeEmptyKeys = (obj: Object) =>
   Object.keys(obj).forEach((key) => {
     if (
       obj[key] === "" ||

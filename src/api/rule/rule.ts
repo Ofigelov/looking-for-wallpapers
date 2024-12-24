@@ -1,8 +1,9 @@
-import { MobxQuery } from "@ofigelov/mobx-query";
+import { type MobxQuery } from "@ofigelov/mobx-query";
 import { nanoid } from "nanoid";
-import { GetRulePostsQueryParams } from "./dto.ts";
+import { type GetRulePostsQueryParams, type RulePost } from "./dto.ts";
 import { toURLSearchParamsString } from "../../utils";
 import { cacheService } from "../services";
+import { PostsRepository } from "../types.ts";
 
 const postsKey = nanoid();
 const REQUIRED_PARAMS = {
@@ -12,13 +13,15 @@ const REQUIRED_PARAMS = {
   q: "index",
 };
 
-export class RuleRepository {
-  constructor(private readonly _cacheService: MobxQuery) {}
+export class RuleRepository extends PostsRepository<RulePost> {
+  constructor(private readonly _cacheService: MobxQuery) {
+    super();
+  }
 
   public getPostsQuery = (params: GetRulePostsQueryParams) =>
     this._cacheService.createInfiniteQuery(
       [postsKey, params],
-      ({ offset, count }) =>
+      ({ offset, count }): Promise<RulePost[]> =>
         fetch(
           `/index.php?${toURLSearchParamsString({
             ...REQUIRED_PARAMS,

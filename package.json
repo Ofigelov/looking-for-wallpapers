@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "@ofigelov/mobx-query": "0.0.1",
-    "@ofigelov/mobx-search-params-service": "0.0.2",
+    "@ofigelov/mobx-search-params-service": "0.0.3",
+    "@ofigelov/storefactory": "0.0.1",
     "@tippyjs/react": "^4.2.6",
     "axios": "^1.7.9",
     "classnames": "^2.5.1",
