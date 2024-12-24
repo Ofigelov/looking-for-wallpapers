@@ -6,9 +6,10 @@ import dotenv from "dotenv";
 // используем dotenv, чтобы получить доступ к process.env перед началом сборки
 dotenv.config();
 
-const PROXY_URL = process.env.PROXY_URL as string;
+const KONA_PROXY_URL = process.env.KONA_PROXY_URL as string;
+const RULE_PROXY_URL = process.env.RULE_PROXY_URL as string;
 
-console.log(PROXY_URL);
+console.log(KONA_PROXY_URL, RULE_PROXY_URL);
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -18,7 +19,8 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      "^/post/*": PROXY_URL,
+      "^/post/*": KONA_PROXY_URL,
+      "^/index.php": RULE_PROXY_URL,
     },
   },
 });

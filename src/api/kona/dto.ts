@@ -40,9 +40,3 @@ export type KonaPost = {
 export type GetPostsQueryParams = {
   tags?: string[];
 };
-
-export type GetPostsRequestParams = {
-  tags?: string[];
-  page?: number;
-  limit?: number;
-};

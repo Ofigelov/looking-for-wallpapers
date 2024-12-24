@@ -12,9 +12,13 @@ class KonaRepository {
   public getPostsQuery = (params: GetPostsQueryParams) =>
     this._cacheService.createInfiniteQuery(
       [postsKey, params],
-      (inifiniteParams) =>
+      ({ count, offset }) =>
         fetch(
-          `/post.json?${toURLSearchParamsString({ tags: params.tags, limit: inifiniteParams.count, page: inifiniteParams.offset || undefined })}`,
+          `/post.json?${toURLSearchParamsString({
+            tags: params.tags,
+            limit: count,
+            page: offset / count,
+          })}`,
         ).then((response) => response.json()),
     );
 
