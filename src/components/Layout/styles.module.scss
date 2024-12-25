@@ -1,0 +1,21 @@
+.wrapper {
+    display: grid;
+    height: 100%;
+    grid-template-areas: 'header header' 'aside main';
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 60px 1fr;
+    gap: 30px;
+    padding: 30px;
+
+    &__header {
+        grid-area: header;
+    }
+
+    &__aside {
+        grid-area: aside;
+    }
+
+    &__main {
+        grid-area: main;
+    }
+}

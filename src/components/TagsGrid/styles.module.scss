@@ -1,0 +1,32 @@
+@import "../../general/scss/settings";
+
+.wrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  &__item {
+    color: $color-pinky;
+
+    &:nth-child(2n) {
+      color: $color-white;
+    }
+  }
+
+  &__btn {
+    @include reset-button;
+
+    color: inherit;
+    transition: color 0.3s linear;
+    cursor: pointer;
+    padding: 0;
+
+    @include active-hover-focus {
+      color: lightgreen;
+    }
+
+    &.is-active {
+      text-decoration: underline;
+    }
+  }
+}

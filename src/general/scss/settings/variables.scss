@@ -29,14 +29,6 @@ $layer-overlay: 300;
 $layer-element-spinner: 150;
 $layer-modal: 200;
 $layer-notification: 250;
-$container-max-width: 1920px;
+$container-max-width: 2560px;
 $default-mobile-vertical-gap-between-components: 60px;
 $default-desktop-vertical-gap-between-components: 160px;
-
-// Share btn
-$share-btn-size: 48px;
-$share-btn-size-small: 41px;
-$share-btn-gap: 1px;
-
-$icon-arrow-down: 'data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><path fill="#{rgba($color-black, 0.99)}" d="M26.1 5.7L14 19.7 1.9 5.7.1 7.3l13.9 16 13.9-16z"/></svg>';
-$icon-arrow-up: 'data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);" viewBox="0 0 28 28"><path fill="#{rgba($color-black, 0.99)}" d="M26.1 5.7L14 19.7 1.9 5.7.1 7.3l13.9 16 13.9-16z"/></svg>';

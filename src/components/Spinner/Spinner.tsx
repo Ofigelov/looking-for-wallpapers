@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 import styles from "./styles.module.scss";
-import classnames from "classnames";
+import cn from "classnames";
 
 type SpinnerProps = HTMLAttributes<HTMLDivElement> & {
   size?: number;
@@ -16,18 +16,18 @@ export const Spinner = ({
   ...props
 }: SpinnerProps) => (
   <div
-    className={classnames(className, styles.spinner, {
+    className={cn(className, styles.wrapper, {
       [styles.isActive]: isActive,
     })}
     {...props}
   >
-    {withOverlay && <div className={styles.spinner__overlay} />}
+    {withOverlay && <div className={styles.wrapper__overlay} />}
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={`${size}px`}
       height={`${size}px`}
       viewBox="0 0 23 23"
-      className={styles.spinner__icon}
+      className={styles.wrapper__icon}
     >
       <circle
         cx="12"
@@ -38,7 +38,7 @@ export const Spinner = ({
         strokeDasharray="63"
       />
       <circle
-        className={styles.spinner__circle}
+        className={styles.wrapper__circle}
         cx="12"
         cy="12"
         strokeWidth="2"
