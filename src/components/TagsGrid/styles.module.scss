@@ -1,9 +1,14 @@
 @import "../../general/scss/settings";
 
 .wrapper {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-gap: 12px;
+
+  &__list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
 
   &__item {
     color: $color-pinky;

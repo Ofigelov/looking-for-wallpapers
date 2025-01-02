@@ -1,4 +1,4 @@
-import { type MobxQuery } from "@ofigelov/mobx-query";
+import { type MobxQuery } from "@astral/mobx-query";
 import { nanoid } from "nanoid";
 import { type GetRulePostsQueryParams, type RulePost } from "./dto.ts";
 import { toURLSearchParamsString } from "../../utils";
@@ -30,6 +30,9 @@ export class RuleRepository extends PostsRepository<RulePost> {
             pid: offset / count,
           })}`,
         ).then((response) => response.json()),
+      {
+        incrementCount: 100,
+      },
     );
 
   public invalidatePostQuery = () => this._cacheService.invalidate([postsKey]);

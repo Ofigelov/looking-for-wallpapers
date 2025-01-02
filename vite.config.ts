@@ -14,9 +14,6 @@ console.log(KONA_PROXY_URL, RULE_PROXY_URL);
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
-  optimizeDeps: {
-    include: ["@ofigelov/mobx-query", "@ofigelov/mobx-search-params-service"],
-  },
   server: {
     proxy: {
       "^/post/*": KONA_PROXY_URL,

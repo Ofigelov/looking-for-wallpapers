@@ -1,12 +1,13 @@
 import { createRoot } from "react-dom/client";
-import { HomePage } from "./components/home-page/home-page";
 import { StrictMode } from "react";
 import "./general/scss/index.scss";
+import { Layout } from "./components/Layout";
+import { Aside, Header, KonaMainGrid } from "./features";
 
 const root = document.getElementById("root");
 
 createRoot(root!).render(
   <StrictMode>
-    <HomePage />
+    <Layout header={<Header />} aside={<Aside />} main={<KonaMainGrid />} />
   </StrictMode>,
 );

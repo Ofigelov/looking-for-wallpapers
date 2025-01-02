@@ -7,17 +7,18 @@
     gap: 15px;
     grid-template-areas: 'top' 'center' 'bottom';
     align-items: flex-start;
-    height: 100%;
+    align-content: flex-start;
 
     &__error {
+        grid-area: top;
         position: sticky;
         top: 0;
     }
 
     &__list {
-        grid-area: grid;
+        grid-area: center;
         grid-gap: 20px;
-        grid-template-columns: repeat(auto-fill, 150px);
+        grid-template-columns: repeat(auto-fill, 250px);
         display: grid;
         justify-content: space-between;
         list-style: none;
@@ -42,7 +43,7 @@
         }
     }
 
-    &__load-more {
+    &__loadMore {
         grid-area: bottom;
         display: flex;
         width: 100%;

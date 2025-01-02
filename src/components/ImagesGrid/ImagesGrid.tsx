@@ -4,10 +4,10 @@ import { GridImage, GridImageProps } from "../GridImage/GridImage.tsx";
 import { Button } from "../Button";
 import cn from "classnames";
 
-type Item = Omit<GridImageProps, "onTagClick">;
+export type ImagesGridItem = Omit<GridImageProps, "onTagClick">;
 
 export type ImagesGridProps = {
-  items: Item[];
+  items: ImagesGridItem[];
   isLoading: boolean;
   isEndReached: boolean;
   fetchMore: () => void;
@@ -27,14 +27,14 @@ export const ImagesGrid = ({
     {isError && <div className={styles.wrapper__error}>Fetching error!</div>}
     <ul className={styles.wrapper__list}>
       {items.map((item, index) => (
-        <li className={styles.konaGrid__item} key={`${index}_${item.id}`}>
+        <li className={styles.wrapper__item} key={`${index}_${item.id}`}>
           <GridImage onTagClick={onTagClick} {...item} />
         </li>
       ))}
     </ul>
     <Spinner
       className={cn(styles.wrapper__spinner, {
-        [styles.wrapper__spinnerInitial]: isLoading && !items.length,
+        [styles["wrapper__spinner--initial"]]: isLoading && !items.length,
       })}
       isActive={isLoading}
       withOverlay

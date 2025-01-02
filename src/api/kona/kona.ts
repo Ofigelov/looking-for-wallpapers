@@ -1,4 +1,4 @@
-import { type MobxQuery } from "@ofigelov/mobx-query";
+import { type MobxQuery } from "@astral/mobx-query";
 import { cacheService } from "../services";
 import { type GetPostsQueryParams, type KonaPost } from "./dto.ts";
 import { nanoid } from "nanoid";
@@ -23,6 +23,9 @@ export class KonaRepository extends PostsRepository<KonaPost> {
             page: offset / count,
           })}`,
         ).then((response) => response.json()),
+      {
+        incrementCount: 100,
+      },
     );
 
   public invalidatePostQuery = () => this._cacheService.invalidate([postsKey]);

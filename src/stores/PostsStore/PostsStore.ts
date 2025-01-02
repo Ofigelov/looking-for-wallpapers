@@ -24,7 +24,7 @@ export class PostsStore<TData, TRepo extends PostsRepository<TData>> {
     return this.query.isLoading;
   }
 
-  public get data() {
+  public get data(): TData[] {
     return this.query.data ?? [];
   }
 
@@ -38,5 +38,19 @@ export class PostsStore<TData, TRepo extends PostsRepository<TData>> {
 
   public invalidate = () => {
     this._repo.invalidatePostQuery();
+  };
+
+  public toggleTag = (tag: string) => {
+    if (this._searchParamsService.data?.tags?.includes(tag)) {
+      const filtered = this._searchParamsService.data?.tags.filter(
+        (tag) => tag !== tag,
+      );
+      this._searchParamsService.apply({ tags: filtered });
+    } else {
+      const combined = [...(this._searchParamsService.data?.tags ?? []), tag];
+      this._searchParamsService.apply({
+        tags: combined,
+      });
+    }
   };
 }

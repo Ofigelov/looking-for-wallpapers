@@ -15,6 +15,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astral/mobx-query@npm:1.10.3":
+  version: 1.10.3
+  resolution: "@astral/mobx-query@npm:1.10.3"
+  dependencies:
+    "@astral/utils": "npm:^1.6.1"
+    "@emotion/hash": "npm:0.9.2"
+    mobx: "npm:^6.9.0"
+    utility-types: "npm:3.11.0"
+  checksum: 10c0/c5ef0d7606ef4cdacc6374708e32e2396ea489869ed5298e428dcc8bd38588738032637f96f4a8e864e68c6116447ccdc4af89ded779848374579da45e8e7dfc
+  languageName: node
+  linkType: hard
+
+"@astral/utils@npm:^1.6.1":
+  version: 1.6.1
+  resolution: "@astral/utils@npm:1.6.1"
+  dependencies:
+    dayjs: "npm:1.11.10"
+    is-plain-object: "npm:^5.0.0"
+    remeda: "npm:^1.40.1"
+  checksum: 10c0/40234851b6d317739580f2f8d3c42090abf425fa292a1b45d4989a3f664cb7b340240b1574a7fba56255cad2b4569641c2148eb5fd727c9fbef740a3846242ec
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:^7.25.9, @babel/code-frame@npm:^7.26.0, @babel/code-frame@npm:^7.26.2":
   version: 7.26.2
   resolution: "@babel/code-frame@npm:7.26.2"
@@ -209,6 +232,13 @@ __metadata:
     "@babel/helper-string-parser": "npm:^7.25.9"
     "@babel/helper-validator-identifier": "npm:^7.25.9"
   checksum: 10c0/966c5242c5e55c8704bf7a7418e7be2703a0afa4d19a8480999d5a4ef13d095dd60686615fe5983cb7593b4b06ba3a7de8d6ca501c1d78bdd233a10d90be787b
+  languageName: node
+  linkType: hard
+
+"@emotion/hash@npm:0.9.2":
+  version: 0.9.2
+  resolution: "@emotion/hash@npm:0.9.2"
+  checksum: 10c0/0dc254561a3cc0a06a10bbce7f6a997883fd240c8c1928b93713f803a2e9153a257a488537012efe89dbe1246f2abfe2add62cdb3471a13d67137fcb808e81c2
   languageName: node
   linkType: hard
 
@@ -610,29 +640,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ofigelov/mobx-query@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@ofigelov/mobx-query@npm:0.0.1"
-  peerDependencies:
-    mobx: ">6.9.0"
-  checksum: 10c0/4872f7d25eb17b30d035bd4ab8e9acfbab3b8382d84720d21ea45f7375094bc7284fcc546fd13f7a6ef869a7d0deac89d31dd46f65442cb8fffe90d0dd51a8d6
-  languageName: node
-  linkType: hard
-
-"@ofigelov/mobx-search-params-service@npm:0.0.3":
-  version: 0.0.3
-  resolution: "@ofigelov/mobx-search-params-service@npm:0.0.3"
+"@ofigelov/mobx-search-params-service@npm:0.0.4":
+  version: 0.0.4
+  resolution: "@ofigelov/mobx-search-params-service@npm:0.0.4"
   peerDependencies:
     mobx: ">6.0.0"
     remeda: ">2.0.0"
-  checksum: 10c0/7e3a4bcae017d607fb05a7bb49d285dd173b9f1a18d729133a8c252a3b8696930aad6f69d867bdb3add46cbc697fffcdb7a943ac6e817d8bb4a8609f2891c513
+  checksum: 10c0/96462ddc7a1dd9b99427a8c965ae1889928702ceabbea946b01f1f41b5d91ab8fffd8b02bc24cedbb7617884e45e1abe857418c2a0e35685da686b7028f6cdcf
   languageName: node
   linkType: hard
 
-"@ofigelov/storefactory@npm:0.0.1":
+"@ofigelov/storefactory@npm:0.0.2":
+  version: 0.0.2
+  resolution: "@ofigelov/storefactory@npm:0.0.2"
+  checksum: 10c0/d0a53337d71a286aca509d9db27cb7f26b79e3c96193938935668fee4d82d724c9099089b72ea6e9f359fb95d9394f8d7a11c1d28c1804a9e23d03714d3911c9
+  languageName: node
+  linkType: hard
+
+"@ofigelov/weakrefmap@npm:0.0.1":
   version: 0.0.1
-  resolution: "@ofigelov/storefactory@npm:0.0.1"
-  checksum: 10c0/efe178a3c84fe2e6313e4debfd1ac58c456713bbd0ed1958f36c211e7d2badd8f371dde789704cd837d822c4bbdda3fe9beaa9bf47390c3f324d7a8a4c22c82f
+  resolution: "@ofigelov/weakrefmap@npm:0.0.1"
+  checksum: 10c0/b73780476879d5d4a23f5a094db5030f5553bfa8221f611e4d3acfd4b386644e448e7c451e76f08f0e907cab729df01467765233345b719e5dfd3310ee7c2e72
   languageName: node
   linkType: hard
 
@@ -1300,6 +1328,13 @@ __metadata:
   version: 3.1.3
   resolution: "csstype@npm:3.1.3"
   checksum: 10c0/80c089d6f7e0c5b2bd83cf0539ab41474198579584fa10d86d0cafe0642202343cbc119e076a0b1aece191989477081415d66c9fefbf3c957fc2fc4b7009f248
+  languageName: node
+  linkType: hard
+
+"dayjs@npm:1.11.10":
+  version: 1.11.10
+  resolution: "dayjs@npm:1.11.10"
+  checksum: 10c0/4de9af50639d47df87f2e15fa36bb07e0f9ed1e9c52c6caa1482788ee9a384d668f1dbd00c54f82aaab163db07d61d2899384b8254da3a9184fc6deca080e2fe
   languageName: node
   linkType: hard
 
@@ -1987,6 +2022,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-plain-object@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "is-plain-object@npm:5.0.0"
+  checksum: 10c0/893e42bad832aae3511c71fd61c0bf61aa3a6d853061c62a307261842727d0d25f761ce9379f7ba7226d6179db2a3157efa918e7fe26360f3bf0842d9f28942c
+  languageName: node
+  linkType: hard
+
 "isexe@npm:^2.0.0":
   version: 2.0.0
   resolution: "isexe@npm:2.0.0"
@@ -2101,10 +2143,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "lfp@workspace:."
   dependencies:
+    "@astral/mobx-query": "npm:1.10.3"
     "@eslint/js": "npm:^9.17.0"
-    "@ofigelov/mobx-query": "npm:0.0.1"
-    "@ofigelov/mobx-search-params-service": "npm:0.0.3"
-    "@ofigelov/storefactory": "npm:0.0.1"
+    "@ofigelov/mobx-search-params-service": "npm:0.0.4"
+    "@ofigelov/storefactory": "npm:0.0.2"
+    "@ofigelov/weakrefmap": "npm:0.0.1"
     "@tippyjs/react": "npm:^4.2.6"
     "@types/node": "npm:^22.10.2"
     "@types/react": "npm:19.0.2"
@@ -2119,8 +2162,8 @@ __metadata:
     globals: "npm:^15.13.0"
     lightningcss: "npm:^1.28.2"
     mobx: "npm:6.13.5"
+    mobx-react-lite: "npm:4.1.0"
     nanoid: "npm:^5.0.9"
-    prettier: "npm:3.4.2"
     react: "npm:19.0.0"
     react-dom: "npm:19.0.0"
     remeda: "npm:^2.18.0"
@@ -2432,7 +2475,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mobx@npm:6.13.5":
+"mobx-react-lite@npm:4.1.0":
+  version: 4.1.0
+  resolution: "mobx-react-lite@npm:4.1.0"
+  dependencies:
+    use-sync-external-store: "npm:^1.4.0"
+  peerDependencies:
+    mobx: ^6.9.0
+    react: ^16.8.0 || ^17 || ^18 || ^19
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 10c0/72300665cc64d73a58d650bdf5131878376a865ae708cabc2940ee22cf6b762aeed239a83ea104ea3742a0b1563a81a19acc02f162e19f524a9b5b0f0a86668e
+  languageName: node
+  linkType: hard
+
+"mobx@npm:6.13.5, mobx@npm:^6.9.0":
   version: 6.13.5
   resolution: "mobx@npm:6.13.5"
   checksum: 10c0/43691c836363aa1f13c44e43c86ab89fc8f4b83ef408bc6c68d799260e74b4ff08ebba2ef16bda447c6b7bca3558768e15927c0b21ffbb10e99b610783f28859
@@ -2634,15 +2694,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.4.2":
-  version: 3.4.2
-  resolution: "prettier@npm:3.4.2"
-  bin:
-    prettier: bin/prettier.cjs
-  checksum: 10c0/99e076a26ed0aba4ebc043880d0f08bbb8c59a4c6641cdee6cdadf2205bdd87aa1d7823f50c3aea41e015e99878d37c58d7b5f0e663bba0ef047f94e36b96446
-  languageName: node
-  linkType: hard
-
 "proc-log@npm:^5.0.0":
   version: 5.0.0
   resolution: "proc-log@npm:5.0.0"
@@ -2712,6 +2763,13 @@ __metadata:
   dependencies:
     picomatch: "npm:^2.2.1"
   checksum: 10c0/6fa848cf63d1b82ab4e985f4cf72bd55b7dcfd8e0a376905804e48c3634b7e749170940ba77b32804d5fe93b3cc521aa95a8d7e7d725f830da6d93f3669ce66b
+  languageName: node
+  linkType: hard
+
+"remeda@npm:^1.40.1":
+  version: 1.61.0
+  resolution: "remeda@npm:1.61.0"
+  checksum: 10c0/dc9995e740adc93cddc31f814d9293f3fe327114fdab7fe9e4ac83d5607d63d05645662dec3280a6d9260105a848acfbc763c37ad8b0636f40805aab0cb4bf7e
   languageName: node
   linkType: hard
 
@@ -3169,6 +3227,22 @@ __metadata:
   dependencies:
     punycode: "npm:^2.1.0"
   checksum: 10c0/4ef57b45aa820d7ac6496e9208559986c665e49447cb072744c13b66925a362d96dd5a46c4530a6b8e203e5db5fe849369444440cb22ecfc26c679359e5dfa3c
+  languageName: node
+  linkType: hard
+
+"use-sync-external-store@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "use-sync-external-store@npm:1.4.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/ec011a5055962c0f6b509d6e78c0b143f8cd069890ae370528753053c55e3b360d3648e76cfaa854faa7a59eb08d6c5fb1015e60ffde9046d32f5b2a295acea5
+  languageName: node
+  linkType: hard
+
+"utility-types@npm:3.11.0":
+  version: 3.11.0
+  resolution: "utility-types@npm:3.11.0"
+  checksum: 10c0/2f1580137b0c3e6cf5405f37aaa8f5249961a76d26f1ca8efc0ff49a2fc0e0b2db56de8e521a174d075758e0c7eb3e590edec0832eb44478b958f09914920f19
   languageName: node
   linkType: hard
 

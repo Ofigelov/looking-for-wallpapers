@@ -1,1 +1,1 @@
-export * from "./RulePostsStore.ts";
+export * from "./RulePostsStore";
