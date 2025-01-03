@@ -2,15 +2,16 @@ import { observer } from "mobx-react-lite";
 import { useMemo } from "react";
 import { createKonaTagsCloudStore } from "../../stores";
 import { TagsGrid } from "../../components";
+import { ratings } from "./constants";
 
-export const KonaTagsCloud = observer(() => {
+export const KonaRatingsTags = observer(() => {
   const store = useMemo(createKonaTagsCloudStore, []);
   return (
     <TagsGrid
-      tags={store.tags}
-      appliedTags={store.appliedTags}
+      title="Ratings"
       onTagClick={store.toggleTag}
-      title="Tags cloud"
+      tags={ratings}
+      appliedTags={store.appliedTags}
     />
   );
 });

@@ -2,7 +2,7 @@ import { ReactNode, useEffect, useState } from "react";
 import { usePredictiveSearch } from "../../general/js/use-predictive-search";
 import { popupDefaultProps } from "../../general/js/popup-config";
 import Tippy from "@tippyjs/react";
-import { Spinner } from "../Spinner/Spinner.tsx";
+import { Spinner } from "../Spinner";
 import styles from "./predictive.module.scss";
 
 type IPredictiveSearchItem = {

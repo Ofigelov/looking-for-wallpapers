@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
-import { Spinner } from "../Spinner/Spinner.tsx";
-import { GridImage, GridImageProps } from "../GridImage/GridImage.tsx";
+import { Spinner } from "../Spinner";
+import { GridImage, GridImageProps } from "../GridImage";
 import { Button } from "../Button";
 import cn from "classnames";
 

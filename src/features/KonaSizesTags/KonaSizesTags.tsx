@@ -1,16 +1,17 @@
 import { observer } from "mobx-react-lite";
+import { TagsGrid } from "../../components";
+import { sizes } from "./constants.ts";
 import { useMemo } from "react";
 import { createKonaTagsCloudStore } from "../../stores";
-import { TagsGrid } from "../../components";
 
-export const KonaTagsCloud = observer(() => {
+export const KonaSizesTags = observer(() => {
   const store = useMemo(createKonaTagsCloudStore, []);
   return (
     <TagsGrid
-      tags={store.tags}
-      appliedTags={store.appliedTags}
+      title="Sizes"
+      tags={sizes}
       onTagClick={store.toggleTag}
-      title="Tags cloud"
+      appliedTags={store.appliedTags}
     />
   );
 });

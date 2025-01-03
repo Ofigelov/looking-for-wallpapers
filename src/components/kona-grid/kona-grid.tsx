@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { KonaImage } from "../kona-image/kona-image";
 import { FilterContext } from "../filter/filter-service";
-import { Spinner } from "../Spinner/Spinner.tsx";
+import { Spinner } from "../Spinner";
 import { LoadMore } from "./load-more";
 import { KonaGridTags } from "./kona-grid-tags";
 import { KonaGridSearch } from "./kona-grid-search";

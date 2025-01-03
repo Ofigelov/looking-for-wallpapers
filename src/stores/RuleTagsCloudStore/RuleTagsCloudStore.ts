@@ -24,7 +24,7 @@ export class RuleTagsCloudStore extends typedTagsStore {
   }
 }
 
-export const createKonaTagsCloudStore = new RuleTagsCloudStore(
+export const createRuleTagsCloudStore = new RuleTagsCloudStore(
   createRulePostsStore(),
   searchParamsStore,
 );

@@ -8,10 +8,12 @@
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    max-width: 300px;
   }
 
   &__item {
     color: $color-pinky;
+      flex-grow: 1;
 
     &:nth-child(2n) {
       color: $color-white;
@@ -19,19 +21,6 @@
   }
 
   &__btn {
-    @include reset-button;
-
-    color: inherit;
-    transition: color 0.3s linear;
-    cursor: pointer;
-    padding: 0;
-
-    @include active-hover-focus {
-      color: lightgreen;
-    }
-
-    &.is-active {
-      text-decoration: underline;
-    }
+    width: 100%;
   }
 }

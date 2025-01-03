@@ -13,6 +13,8 @@
 
     &__aside {
         grid-area: aside;
+        display: grid;
+        grid-gap: 20px;
     }
 
     &__main {

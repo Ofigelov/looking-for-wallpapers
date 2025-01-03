@@ -43,7 +43,7 @@ export class PostsStore<TData, TRepo extends PostsRepository<TData>> {
   public toggleTag = (tag: string) => {
     if (this._searchParamsService.data?.tags?.includes(tag)) {
       const filtered = this._searchParamsService.data?.tags.filter(
-        (tag) => tag !== tag,
+        (_tag) => tag !== _tag,
       );
       this._searchParamsService.apply({ tags: filtered });
     } else {
