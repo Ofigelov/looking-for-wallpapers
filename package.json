@@ -12,7 +12,7 @@
   "dependencies": {
     "@astral/mobx-query": "1.10.3",
     "@ofigelov/mobx-search-params-service": "0.0.4",
-    "@ofigelov/storefactory": "0.0.2",
+    "@ofigelov/storefactory": "0.1.0",
     "@ofigelov/weakrefmap": "0.0.1",
     "@tippyjs/react": "^4.2.6",
     "axios": "^1.7.9",

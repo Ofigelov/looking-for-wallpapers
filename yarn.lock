@@ -650,10 +650,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ofigelov/storefactory@npm:0.0.2":
-  version: 0.0.2
-  resolution: "@ofigelov/storefactory@npm:0.0.2"
-  checksum: 10c0/d0a53337d71a286aca509d9db27cb7f26b79e3c96193938935668fee4d82d724c9099089b72ea6e9f359fb95d9394f8d7a11c1d28c1804a9e23d03714d3911c9
+"@ofigelov/storefactory@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@ofigelov/storefactory@npm:0.1.0"
+  checksum: 10c0/0169facbd7adf76a74fb512726207cd8556d26da885115d8d6f9a0be2e18d564cec06f2d38b4fd00e5a96e2c30faf8f2e55b7c190e518e58b5365b0aedace3c5
   languageName: node
   linkType: hard
 
@@ -2146,7 +2146,7 @@ __metadata:
     "@astral/mobx-query": "npm:1.10.3"
     "@eslint/js": "npm:^9.17.0"
     "@ofigelov/mobx-search-params-service": "npm:0.0.4"
-    "@ofigelov/storefactory": "npm:0.0.2"
+    "@ofigelov/storefactory": "npm:0.1.0"
     "@ofigelov/weakrefmap": "npm:0.0.1"
     "@tippyjs/react": "npm:^4.2.6"
     "@types/node": "npm:^22.10.2"
