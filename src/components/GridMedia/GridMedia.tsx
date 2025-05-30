@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { MouseEventHandler, useMemo } from "react";
 import styles from "./styles.module.scss";
 
 type ImageProps = {
@@ -7,20 +7,22 @@ type ImageProps = {
   width: number;
 };
 
-export type GridImageProps = {
+export type GridMediaProps = {
   id: number;
   preview: ImageProps;
   main: ImageProps;
   tags: string | string[];
   onTagClick: (tage: string) => void;
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
-export const GridImage = ({
+export const GridMedia = ({
   preview,
   main,
   tags,
   onTagClick,
-}: GridImageProps) => {
+  onClick,
+}: GridMediaProps) => {
   const optimizedTags = useMemo(
     () => (Array.isArray(tags) ? tags : tags.split(" ")),
     [tags],
@@ -34,6 +36,7 @@ export const GridImage = ({
         target="_blank"
         rel="noreferrer noopener"
         title={tags.toString()}
+        onClick={onClick}
       >
         <img
           className="lazyload"

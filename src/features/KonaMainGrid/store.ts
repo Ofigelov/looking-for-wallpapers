@@ -1,7 +1,7 @@
 import { computed, makeObservable } from "mobx";
 import { createKonaPostsStore } from "../../stores";
 import { InfiniteStatusesStore } from "../../utils";
-import { ImagesGridItem } from "../../components/ImagesGrid";
+import { MediaGridItem } from "../../components/MediaGrid";
 
 export class UIStore extends InfiniteStatusesStore {
   constructor(
@@ -15,7 +15,7 @@ export class UIStore extends InfiniteStatusesStore {
     return this._postsStore.toggleTag;
   }
 
-  public get items(): ImagesGridItem[] {
+  public get items(): MediaGridItem[] {
     return this._postsStore.data?.map(
       ({
         tags,
